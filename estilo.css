@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Roboto";
+    font-size: 62.5%;
+    --color-salmom:#E45858;
+    --color-purple:#6246EA;
+    --color-black:#121214;
+    --collor-gray:#7C7C8A;
+    --color-white-smoke:#EAEAEA;
+    --color-smooth-white: #F4F4FF;
+    --colr-white:#FFFFFF;
+    --color-background:#F8F8FF;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+body {
+    font-size: 1.6rem;
+}
+
+input,
+select,
+button {
+    font-family: "Roboto";
+    all: unset;
+}
+
+header {
+    min-height: 53.2rem;
+    background-color: var(--color-background);    
+    position: relative;
+    overflow: hidden;
+
+    display: grid;
+    place-content: center;
+}
+
+header::before {
+    content: "";
+    background-image: url(./imgs/ilustra-01-left.svg);
+    width: 40.7rem;
+    height: 34.5rem;
+
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+header::after {
+    content: "";
+    background-image: url(./imgs/ilustra-02-right.svg);
+    width: 41.4rem;
+    height: 33rem;
+
+
+    position: absolute;
+    right: 0;
+    bottom: -1.2rem;
+}
+
+header .content {
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+header .content .top {
+    text-align: center;
+}
+
+header p {
+    font-weight: 500;
+    line-height: 160%;
+
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: var(--color-salmom);
+}
+
+header h1 {
+    font-size: 4.8rem;
+    line-height: 125%;
+    color: var(--color-black);
+    max-width: 64.7rem;
+    margin: auto;
+}
+
+header h1 span {
+    color: var(--color-purple);
+}
+
+header form {
+    display: flex;
+    padding: 4rem;
+    gap: 2.4rem;
+    background: var(--colr-white);
+    border: 0.1rem solid var(--color-white-smoke);
+    border-radius: 1rem;
+    margin-top: 4rem;
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    background-color: var(--color-smooth-white);
+    border-radius: 0.5rem;
+    padding: 1.2rem .8rem 1.2rem 1.4rem;
+}
+
+input, 
+select {
+    color: var(--collor-gray);
+    min-width: 29rem;
+
+}
+
+.search-field i {
+    color: var(--color-salmom);
+    font-size: 2.4rem;
+}
+
+form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 3.2rem;
+    gap: .8rem;
+    color: var(--colr-white);
+    background:var(--color-purple);
+    border-radius: .5rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+}
