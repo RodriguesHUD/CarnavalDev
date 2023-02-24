@@ -17,6 +17,20 @@
     --color-background:#F8F8FF;
 }
 
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    padding: .4rem 2.4rem;
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -29,6 +43,27 @@
     border-width: 0;
 }
 
+.primary {
+    color: var(--colr-white);
+    background:var(--color-purple);
+    border-radius: .5rem;
+}
+
+.primary:hover{
+    background: #543bd3;
+    color: var(--colr-white);
+}
+
+.secondary {
+    color: #6246EA;
+    background:var(--colr-white);
+    border-radius: .5rem;
+   
+}
+
+.secondary:hover{
+    background: var(--color-white-smoke);
+}
 
 body {
     font-size: 1.6rem;
@@ -40,7 +75,7 @@ button {
     font-family: "Roboto";
     all: unset;
 }
-
+                                                            /* header */
 header {
     min-height: 53.2rem;
     background-color: var(--color-background);    
@@ -89,12 +124,10 @@ header .content .top {
 header p {
     font-weight: 500;
     line-height: 160%;
-
-
     letter-spacing: 0.1em;
     text-transform: uppercase;
-
     color: var(--color-salmom);
+    text-shadow: .0rem .4rem .4rem rgba(0, 0, 0, 0.25);
 }
 
 header h1 {
@@ -103,13 +136,14 @@ header h1 {
     color: var(--color-black);
     max-width: 64.7rem;
     margin: auto;
+    margin: 1.8rem auto 0;
 }
 
 header h1 span {
     color: var(--color-purple);
 }
 
-header form {
+form {
     display: flex;
     padding: 4rem;
     gap: 2.4rem;
@@ -124,11 +158,11 @@ header form {
     align-items: center;
     gap: 1.2rem;
 
-    background-color: var(--color-smooth-white);
-    border-radius: 0.5rem;
-    padding: 1.2rem .8rem 1.2rem 1.4rem;
+    background: var(--color-smooth-white);
+    border-radius: .5rem;
+    padding: -1rem .8rem 1.2rem 1.4rem;
 }
-
+  
 input, 
 select {
     color: var(--collor-gray);
@@ -141,18 +175,106 @@ select {
     font-size: 2.4rem;
 }
 
+select .select {
+    position: relative;
+}
+
+select {
+    z-index: 1;
+}
+
+select i.ph-caret-down-thin {
+    position: absolute;
+    right: 1rem;
+    z-index: 0;
+    
+}
+
+
 form button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.2rem 3.2rem;
-    gap: .8rem;
-    color: var(--colr-white);
-    background:var(--color-purple);
-    border-radius: .5rem;
+
     cursor: pointer;
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 2.4rem;
     text-transform: uppercase;
+    transition: 0.3s ease;
+    padding: .4rem 2.4rem;
+    padding: 1.2rem 3.2rem;
+}
+
+                                    /* final do header   */
+
+main .content{
+    max-width: 1216px;
+    margin: 10rem auto;
+}
+
+section.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.top h2 {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 140%;
+}
+
+section.top .view {
+    display: flex;
+    padding: .8rem;
+    border: .1rem solid #EAEAEA;
+    border-radius: .6rem;
+}
+
+
+
+section.cards {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3.2rem;
+}
+
+.card {
+    background:var(--color-background);
+    border: .1rem solid #EAEAEA;
+    border-radius: 1rem;
+    max-width: 38.4rem;
+    overflow: hidden;
+}
+
+.card .conteudo {
+    display: grid;
+    padding: 1.6rem;
+    gap: 1.6rem;
+}
+
+.card h3 {
+    color: var(--color-black);
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 140%;
+}
+
+.card p {
+    opacity: 75%;
+}
+
+.card .location {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    opacity: 75%;
+}
+
+.location i {
+    color: var(--color-salmom);
+    font-size: 2.4rem;
 }
